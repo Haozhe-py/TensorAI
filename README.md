@@ -1,5 +1,14 @@
-<b><i>TensorAI</i></b> is an AI tool with the <b>Transformer</b> model.
-<br />
-Website: <a href="https://github.com/haozhe-py/tensorai/">GitHub</a>
-<br /><hr />
-<b>Please do not use it on your PC.</b>
+### TensorAI-0.0.0: An Image Recognition AI tool ###
+
+Welcome to use **TensorAI**. **TensorAI** is an Image Recognition AI tool.
+
+<i>Trained on the **MNIST** dataset</i>
+<hr />
+
+**Usage:**
+
+* **run:**
+  * python3 main.py run
+  * python3 main.py
+* train:
+  * python3 main.py train
