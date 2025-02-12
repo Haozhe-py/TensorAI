@@ -3,6 +3,7 @@ import tensorflow as tf
 from PIL import Image
 import numpy as np
 import sys
+import os
 
 def read_png(fpath:str) -> np.array:
     try:
@@ -44,14 +45,17 @@ def run() -> None:
         print('ERROR: Model not found!\nTraining TensorAI...',file=sys.stderr)
         train()
         run()
+    if os.path.join('a','b')=='a\\b':               #check if the system is Windows
+        os.system('cls')
+    print('欢迎使用TensorAI-0.0.0，此程序可用于识别手写阿拉伯数字。')
     while True:
         try:
             f = input('请输入PNG图片路径：（输入exit退出）\n')
             if f == 'exit':
                 break
             img = read_png(f)
-            pred = tf.argmax(model(img),axis=-1)[0]
-            print('预测结果：',pred)
+            pred = tf.argmax(model(img),axis=-1).numpy().tolist()[0]
+            print('识别结果：',pred)
             print('\n\n')
             continue
         except:
