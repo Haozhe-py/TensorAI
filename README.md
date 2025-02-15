@@ -1,4 +1,4 @@
-### TensorAI-0.0.0: An Image Recognition AI tool ###
+# TensorAI-0.0.0: An Image Recognition AI tool
 
 Welcome to use **TensorAI**.
 
