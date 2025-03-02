@@ -1,7 +1,5 @@
 # TensorAI-0.0.0: An Image Recognition AI tool
 
----
-
 ## Introduction
 
 Welcome to use `TensorAI-0.0.0`, an Image Recognition AI tool,
@@ -11,9 +9,7 @@ Please `pip install tensorflow pillow` before using it.
 
 <i>Trained on the **MNIST** dataset.</i>
 
----
-
-## Usage:
+## Usage
 
 * train:
   * `python3 main.py train`
