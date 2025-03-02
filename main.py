@@ -68,7 +68,7 @@ def run() -> None:
         os.system('cls')
     else:
         os.system('clear')                          #for Linux
-    print('欢迎使用TensorAI-0.0.0，此程序可用于识别手写阿拉伯数字。')
+    print('欢迎使用TensorAI-0.0.1，此程序可用于识别手写阿拉伯数字。')
     while True:
         try:
             f = input('请输入PNG图片路径：（输入exit退出）\n')
