@@ -1,8 +1,8 @@
-# TensorAI-0.0.0: An Image Recognition AI tool
+# TensorAI-0.0.1: An Image Recognition AI tool
 
 ## Introduction
 
-Welcome to use `TensorAI-0.0.0`, an Image Recognition AI tool,
+Welcome to use `TensorAI-0.0.1`, an Image Recognition AI tool,
 which is use to show the number on a picture. (0~9 only)
 
 Please `pip install tensorflow pillow` before using it.
