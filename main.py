@@ -23,9 +23,14 @@ def train() -> None:
     mnist = k.datasets.mnist
     (xtrain,ytrain),(xtest,ytest)=mnist.load_data()
     xtrain, xtest = xtrain/255.0, xtest/255.0
+    xtrain, xval = xtrain[:50000],xtrain[50000:]
+    ytrain, yval = ytrain[:50000],ytrain[50000:]
     model = k.models.Sequential([
-        k.layers.Flatten(input_shape=(28,28)) ,
-        k.layers.Dense(128,activation='relu') ,
+        k.layers.Conv2D(1,(3,3),padding='valid',activation='relu',input_shape=(28,28,1)),
+        k.layers.Conv2D(1,(3,3),padding='valid',activation='relu'),
+        k.layers.MaxPooling2D(pool_size=(2,2)),
+        k.layers.Flatten() ,
+        k.layers.Dense(256,activation='relu') ,
         k.layers.Dropout(0.2) ,
         k.layers.Dense(10, activation='softmax')
     ])
@@ -34,8 +39,22 @@ def train() -> None:
         optimizer='adam',
         metrics=['accuracy']
     )
-    model.fit(xtrain,ytrain,epochs=5)
-    model.save('trained_model.keras')
+    callbacks = [
+        k.callbacks.EarlyStopping(
+            monitor='val_accuracy',
+            patience=3,
+            mode='max'
+        ) ,
+        k.callbacks.ModelCheckpoint(
+            filepath='trained_model.keras',
+            monitor='val_loss',
+            save_best_only=True
+        )
+    ]
+    model.fit(xtrain,ytrain,epochs=25,callbacks=callbacks,validation_data=(xval,yval))
+    del model
+    model = k.models.load_model('trained_model.keras')
+    print('\n\n\n\nEvaluate:\n',model.evaluate(xtest,ytest))
     return None
 
 def run() -> None:
@@ -47,6 +66,8 @@ def run() -> None:
         run()
     if os.path.join('a','b')=='a\\b':               #check if the system is Windows
         os.system('cls')
+    else:
+        os.system('clear')                          #for Linux
     print('欢迎使用TensorAI-0.0.0，此程序可用于识别手写阿拉伯数字。')
     while True:
         try:
