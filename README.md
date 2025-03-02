@@ -18,3 +18,8 @@ Please `pip install tensorflow pillow` before using it.
   * `python3 main.py run`
   * or `python3 main.py`
   * Input the path of your `PNG` file and the model will show the number on the picture.
+
+
+---
+
+TEST Accuracy: 0.97
