@@ -1,2 +1,3 @@
-### TensorAI ###
-Test png files
+# TensorAI (for `TensorFlow`)
+
+Test pictures for `TensorAI`.
