@@ -1,5 +1,8 @@
 # TensorAI-0.0.1: An Image Recognition AI tool
 
+> [!IMPORTANT] If you' re looking for a `TensorAI` for `PyTorch`,
+> see [PyTorchMNIST](https://github.com/Haozhe-py/PyTorchMNIST)
+
 ## Introduction
 
 Welcome to use `TensorAI-0.0.1`, an Image Recognition AI tool,
@@ -22,4 +25,4 @@ Please `pip install tensorflow pillow` before using it.
 
 ---
 
-TEST Accuracy: 0.97
+**TEST** Accuracy: 0.97 ( 97% )
