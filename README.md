@@ -1,6 +1,7 @@
 # TensorAI-0.0.1: An Image Recognition AI tool
 
-> [!IMPORTANT] If you' re looking for a `TensorAI` for `PyTorch`,
+> [!Important]
+> If you' re looking for a `TensorAI` for `PyTorch`,
 > see [PyTorchMNIST](https://github.com/Haozhe-py/PyTorchMNIST)
 
 ## Introduction
