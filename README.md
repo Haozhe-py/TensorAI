@@ -7,7 +7,7 @@
 ## Introduction
 
 Welcome to use `TensorAI-0.0.1`, an Image Recognition AI tool,
-which is use to show the number on a picture. (0~9 only)
+which is used to show the number on a picture. (0~9 only)
 
 Please `pip install tensorflow pillow` before using it.
 
@@ -21,7 +21,7 @@ Please `pip install tensorflow pillow` before using it.
 * **run:**
   * `python3 main.py run`
   * or `python3 main.py`
-  * Input the path of your `PNG` file and the model will show the number on the picture.
+  * Enter the path of your `PNG` file and the model will show the number on the picture.
 
 
 ---
